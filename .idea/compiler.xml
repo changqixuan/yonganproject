@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="upms-eureka-gateway" />
+        <module name="yonganparent" />
+        <module name="upms-eureka-feign" />
+        <module name="eureka-service" />
+        <module name="upms-eureka-yongan" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka-service" options="-parameters" />
+      <module name="upms-eureka-feign" options="-parameters" />
+      <module name="upms-eureka-gateway" options="-parameters" />
+      <module name="upms-eureka-yongan" options="-parameters" />
+    </option>
+  </component>
+</project>

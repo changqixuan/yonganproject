@@ -1,0 +1,30 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8081/eureka/,http://127.0.0.1:8082/eureka/
+server:
+  port: 9000
+spring:
+  application:
+    name: upms-eureka-getway
+  cloud:
+    gateway:
+      routes:
+      - id: user
+        uri: lb://UPMS-EUREKA-FEIGN
+        predicates:
+        - Path=/getway/**
+        filters:
+        - StripPrefix=1
+#      - id: goods
+#        uri: lb://GOODS-SERVICE
+#        predicates:
+#        - Path=/goods/**
+#        filters:
+#        - StripPrefix=1
+#      - id: goods
+#        uri: lb://SHOPPING-CAR-SERVICE
+#        predicates:
+#        - Path=/shoppingcar/**
+#        filters:
+#        - StripPrefix=1
